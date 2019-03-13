@@ -8,13 +8,13 @@ import 'animate.css/animate.min.css'
 
 Vue.config.productionTip = false
 
-const instance = new Vue({
+new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
 
-Vue.axios.interceptors.request.use(config => {
+/* Vue.axios.interceptors.request.use(config => {
   // eslint-disable-next-line no-debugger
   debugger;
   if (localStorage.JWT_TOKEN) {
@@ -49,4 +49,4 @@ Vue.axios.interceptors.response.use(res => {
     })
   }
   return Promise.reject(error)
-})
+}) */
